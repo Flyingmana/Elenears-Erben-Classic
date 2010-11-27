@@ -3,3 +3,5 @@ doc/phpdoc
 src/config/*
 !src/config/main.ini.dist
 src/templates/*
+src/htdocs/*
+!src/htdocs/index.php
