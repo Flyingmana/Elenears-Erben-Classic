@@ -1,0 +1,10 @@
+
+Command for generate documentation with phpdoc
+
+phpdoc -d ./src/classes/ -t ./doc/phpdoc/ -i autoload.php
+
+
+command for (re)generate autoload file
+Use the autoloadgenerator from https://github.com/theseer/Autoload
+
+phpab -o ./src/classes/autoload.php ./src/classes/
