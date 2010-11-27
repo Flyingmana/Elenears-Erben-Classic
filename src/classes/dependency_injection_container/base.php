@@ -61,6 +61,12 @@ class EECEnvironmentDIC extends arbitEnvironmentDIC
     public function initialize()
     {
         parent::initialize();
+
+
+        $this->configuration = function( $dic )
+        {
+            return new EECConfigurationDIC();
+        };
     }
 }
 
