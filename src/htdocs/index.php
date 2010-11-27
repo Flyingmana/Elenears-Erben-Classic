@@ -45,7 +45,7 @@ try
     require EEC_BASE . 'environment.php';
 
     // Set up HTTP environment
-    $env = new arbitHttpEnvironmentDIC();
+    $env = new EECHttpEnvironmentDIC();
 
     // Set up debugging and development options
     $env->debug                 = $debug;

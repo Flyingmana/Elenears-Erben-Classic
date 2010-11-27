@@ -63,3 +63,5 @@ if ( !defined( 'ARBIT_DEBUG' ) )
 
 // Always required for autoloading
 require ARBIT_BASE . 'environment.php';
+
+require EEC_BASE . 'classes/autoload.php';
