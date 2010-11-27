@@ -2,3 +2,4 @@ nbproject
 doc/phpdoc
 src/config/*
 !src/config/main.ini.dist
+src/templates/*
