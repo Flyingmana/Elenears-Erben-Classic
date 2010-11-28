@@ -67,6 +67,21 @@ class EECEnvironmentDIC extends arbitEnvironmentDIC
         {
             return new EECConfigurationDIC();
         };
+
+        $this->moduleManager = function( $dic )
+        {
+            $manager = new EECModuleManager( $dic->signalSlotHandler, $dic->log );
+            $manager->setEnv( $dic );
+            arbitFrameworkBase::setModuleManager( $manager );
+
+            $manager->registerModule( $dic, 'core' );
+            foreach ( $dic->configuration->main->modules as $module )
+            {
+                $manager->registerModule( $dic, $module );
+            }
+
+            return $manager;
+        };
     }
 }
 
