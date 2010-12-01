@@ -38,7 +38,10 @@ class EECModuleManager extends arbitModuleManager
         // Init module
         $moduleClassName = $this->findModuleClass( $moduleName );
         $this->modules[$moduleName] = new $moduleClassName();
-
+        // preload autoload
+        // because we use spl_autoload_register instead of autoload arrays
+        // @todo clean the autoload for modules
+        $this->modules[$moduleName]->autoload;
         // Clear module autoload cache
         arbitFrameworkBase::clearAutoloadCache();
 
@@ -99,9 +102,12 @@ class EECModuleManager extends arbitModuleManager
         $autoload = array();
         foreach ( $this->modules as $definition )
         {
-            foreach ( $definition->autoload as $class => $file )
+            if( is_array($definition->autoload) )
             {
-                $autoload[$class] = $file;
+                foreach ( $definition->autoload as $class => $file )
+                {
+                    $autoload[$class] = $file;
+                }
             }
         }
 
