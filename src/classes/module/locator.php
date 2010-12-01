@@ -15,6 +15,17 @@
  */
 class EECModuleDefinitionLocator extends arbitModuleDefinitionLocator
 {
+    
+    /**
+     * Set a module class name, if the class name does not obey the defined
+     * naming scheme.
+     *
+     * @var array
+     */
+    protected $moduleClass = array(
+        'core' =>   'EECCoreDefinition',
+    );
+
     /**
      * Current environment
      *
@@ -47,11 +58,11 @@ class EECModuleDefinitionLocator extends arbitModuleDefinitionLocator
     {
         if ( isset( $this->moduleFile[$moduleName] ) )
         {
-            return ARBIT_BASE . $this->moduleFile[$moduleName];
+            return EEC_BASE . $this->moduleFile[$moduleName];
         }
-
+        
         //return ARBIT_BASE . 'modules/' . $moduleName . '/definition.php';
-        $modulePath = $dic->env->configuration->project( $dic->env->request->controller )->get( "backend", "modulepath" );
+        $modulePath = $this->env->configuration->main->get( "backend", "modulepath" );
         return $modulePath . $moduleName . '/definition.php';
     }
 

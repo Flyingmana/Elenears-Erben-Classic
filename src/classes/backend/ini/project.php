@@ -43,7 +43,6 @@ class EECBackendIniProjectConfiguration extends arbitBackendIniProjectConfigurat
             'connections'   => array(
                 'couchdb'   => 'couchdb://localhost:5984/eec_'
             ),
-            'modulepath'    => '',
         ),
         'user' => array(
             'auth'          => array(

@@ -39,6 +39,7 @@ class EECBackendIniMainConfiguration extends arbitBackendIniMainConfiguration
         'backend' => array(
             'type'          => 'couchdb',
             'connection'    => 'couchdb://localhost:5984/eec_',
+            'modulepath'    => '',
         ),
         'layout' => array(
             'css'           => array(),
