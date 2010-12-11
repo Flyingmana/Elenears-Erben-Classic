@@ -5,3 +5,5 @@ src/config/*
 src/templates/*
 src/htdocs/*
 !src/htdocs/index.php
+*autoload.php
+
