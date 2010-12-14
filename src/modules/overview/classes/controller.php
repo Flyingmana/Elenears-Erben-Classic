@@ -23,7 +23,11 @@ class EECModuleOverviewController extends arbitModuleController
      */
     public function index( arbitRequest $request )
     {
-        return new EECOverviewViewModel();
+        return new arbitViewModuleModel(
+            $request->action,
+            array(),
+            new EECOverviewViewModel()
+        );
     }
 
     /**
@@ -43,7 +47,7 @@ class EECModuleOverviewController extends arbitModuleController
     /**
      * Overview action
      *
-     * Show user an overview of all PhpDoc questions
+     * Show user an overview
      *
      * @param arbitRequest $request
      * @return arbitViewModuleModel
