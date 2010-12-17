@@ -1,0 +1,30 @@
+======================================
+Design description - Ajax Index Module
+======================================
+
+
+The *Ajax Index Module* offer a place, for ajax based one site applications.
+
+The main idea is, that other modules only represent an http-API and the *Ajax
+Index Modules* allows you to include css and js files, which represent the
+real application.
+To make the application aware about active modules, it also offers a list
+of all activated modules and how they are named.
+
+It is possible add external css and js files to the site.
+
+
+
+needed decisions
+----------------
+
+ * should the *real application* be a module too?
+ * what would be the best way to add the *real application* to the *Ajax Index Module*
+
+possible additions
+------------------
+
+ * version info of modules
+
+
+
