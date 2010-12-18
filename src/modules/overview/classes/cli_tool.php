@@ -13,7 +13,7 @@
  * @package Overview
  * @todo lot of work left
  */
-class arbitModulePhpDocAdminCliTool extends arbitFrameworkActionCliTool
+class EECModuleOverviewAdminCliTool extends arbitFrameworkActionCliTool
 {
     /**
      * Name of CLI tool
@@ -59,11 +59,11 @@ class arbitModulePhpDocAdminCliTool extends arbitFrameworkActionCliTool
 
         $action             = $this->env->in->argumentDefinition['action']->value;
         $request->action    = arbitProjectController::normalizeModuleName(
-            array_search( "phpdoc", $config->modules )
+            array_search( "overview", $config->modules )
         );
         $request->subaction = $this->actions[$action]['action'];
 
-        return new arbitModulePhpDocController( $this->env, $config );
+        return new EECModuleOverviewController( $this->env, $config );
     }
 }
 
