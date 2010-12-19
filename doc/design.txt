@@ -1,0 +1,19 @@
+===========================================
+Design description - Elenears Erben Classic
+===========================================
+
+
+Server - Client side separation
+-------------------------------
+
+server and client code should be separated.
+So we hopefully avoid using restrictions on client side code,
+because we cant control them anyway.
+
+In result we have an http API on server side, which can not only be used by a
+ajax application on this domain. It can be used for example by mobile apps
+or desktop clients, too.
+
+This causes, that the development of the client side code (js and html)
+must be totally separated from the server side code.
+
